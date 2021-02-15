@@ -1,0 +1,29 @@
+{
+    "name": "unicframework/user-agent",
+    "type": "library",
+    "description": "User agent library parse client browsers all data from request.",
+    "keywords": [
+        "UserAgent",
+        "UserAgent Parser",
+        "Unic Framework"
+    ],
+    "homepage": "https://unicframework.github.io/user-agent",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rajkumar Dusad",
+            "homepage": "https://github.com/rajkumardusad",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "UserAgent\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

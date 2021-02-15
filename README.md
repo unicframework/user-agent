@@ -1,37 +1,67 @@
-## Welcome to GitHub Pages
+## User Agent
 
-You can use the [editor on GitHub](https://github.com/unicframework/user-agent/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+  User agent library parse client browsers all data from request.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  - **ip** : get user ip address.
+  - **os** : get user device os name.
+  - **osVersion** : get user device os version.
+  - **browser** : get user browser name.
+  - **browserVersion** : get user browser version.
+  - **deviceType** : get user device type.
+  - **deviceBrand** : get user device brand.
+  - **referrer** : get http referrer.
+  - **isReferred** : check request is referred or not.
+  - **userAgent** : get browser user agent.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Installation
 
-```markdown
-Syntax highlighted code block
+  - Install `composer` if you have not installed.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```shell
+composer require unicframework/user-agent
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Example
 
-### Jekyll Themes
+```php
+use UserAgent\UserAgent;
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/unicframework/user-agent/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+$user = new UserAgent();
 
-### Support or Contact
+//Get client ip address
+echo $user->ip;
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+//Get client os
+echo $user->os;
+
+//Get client os version
+echo $user->osVersion;
+
+//Get client browser
+echo $user->browser;
+
+//Get client browser version
+echo $user->browserVersion;
+
+//Get client device type (Phone, iPhone, Computer)
+echo $user->deviceType;
+
+//Get client device brand name
+echo $user->deviceBrand;
+
+//Get client referrer
+echo $user->referrer;
+
+//Check client is referred or not
+if($user->isReferred) {
+  //Client is referred
+}
+
+//Get client user agent
+echo $user->userAgent;
+```
+
+## License
+
+  [MIT License](https://github.com/unicframework/user-agent/blob/main/LICENSE)
