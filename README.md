@@ -27,38 +27,42 @@ composer require unicframework/user-agent
 ```php
 use UserAgent\UserAgent;
 
+// Parse current request user agent
 $user = new UserAgent();
 
-//Get client ip address
+// Parse custom user agent string
+$user = new UserAgent($_SERVER['HTTP_USER_AGENT']);
+
+// Get client ip address
 echo $user->ip;
 
-//Get client os
+// Get client os
 echo $user->os;
 
-//Get client os version
+// Get client os version
 echo $user->osVersion;
 
-//Get client browser
+// Get client browser
 echo $user->browser;
 
-//Get client browser version
+// Get client browser version
 echo $user->browserVersion;
 
-//Get client device type (Phone, iPhone, Computer)
+// Get client device type (Phone, iPhone, Computer, etc.)
 echo $user->deviceType;
 
-//Get client device brand name
+// Get client device brand name (Apple, Samsung, Lenovo, etc.)
 echo $user->deviceBrand;
 
-//Get client referrer
+// Get client referrer
 echo $user->referrer;
 
-//Check client is referred or not
+// Check client is referred or not
 if($user->isReferred) {
   //Client is referred
 }
 
-//Get client user agent
+// Get client user agent
 echo $user->userAgent;
 ```
 
